@@ -71,9 +71,9 @@ Skills involved:
 
 ==============================================
 **Collaborators**
--Cell
--Primary Board
--Player
+- Cell
+- Primary Board
+- Player
 
 ===============================================
 
