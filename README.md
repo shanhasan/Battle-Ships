@@ -1,24 +1,25 @@
-Battle Ships
-============
+#** Battle Ships **
 
-For our second week at Makers, we have been tasked with designing a game called Battle Ships. This is exactly the same as the board game, where we have two players and each player takes turns in trying to sink each others ships. The winner is the player who sinks all of the opponents ships. 
-=========================================================================================
 
-We are team D and our members include:
+For our second week at Makers, we have been asked to design a game called Battle Ships modulated on the board game, where there are two players and each player takes turns in trying to sink the opponent ships.
+The winner is the player who sinks all of the opponent's ships. 
+
+
+We are _Team D_ and our members include:
 
 Shan Hasan
-Girogia Amici
+Giorgia Amici
 Richard Lake
 Edward Bryne
 Dale Stevens
 
-============
+==========================
 
-Skills Learnt:
+Skills involved:
 - Agile Method
 - Ruby
 
-============
+
 
 CRC Cards
 =========
@@ -49,4 +50,5 @@ Responsibility                  |  Collaborators
 - Fires shots at tracking grid  |     - Board
 - Can win or loose              |    
 - Takes turns to fire           |
+
 
