@@ -33,6 +33,7 @@ Skills involved:
 - Knows if it is full             
 - Knows if its hit       
 - Knows if not hit
+- Can't be hit twice
 
 ========================
 
