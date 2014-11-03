@@ -6,17 +6,22 @@ describe Cell do
   let (:ship) { double :ship }
 
   it 'will initialize without a ship' do
-    expect(cell.has_ship).to be false
+    expect(cell.empty).to be true
   end
 
   it 'can hold a ship' do
     cell.hold(ship)
-    expect(cell.has_ship).to be true
+    expect(cell.empty).to be false
   end
 
-  xit 'knows which ship it is holding' do
+  it 'knows which ship it is holding' do
     cell.hold(ship)
     expect(cell.ship).to be(ship)
+  end
+
+  xit 'can be hit' do
+    cell.hit!
+    expect(cell.hit).to be true
   end
   
 end

@@ -1,14 +1,15 @@
 class Cell
 
   def initialize
-    @has_ship = false
+    @empty = true
+    @ship = nil
   end
 
-  attr_reader :has_ship
+  attr_accessor :empty, :ship
 
   def hold(ship)
-    @has_ship = true
+    @empty = false
+    @ship = ship
   end
-
 
 end
