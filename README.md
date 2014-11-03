@@ -1,4 +1,4 @@
-#** Battle Ships ** #
+#Battle Ships#
 
 
 For our second week at Makers, we have been asked to design a game called Battle Ships modulated on the board game, where there are two players and each player takes turns in trying to sink the opponent ships.
@@ -20,17 +20,28 @@ Skills involved:
 - Ruby
 
 
+=========
 
 ##CRC Cards##
-=========
+
                                           Cell  
 
-Responsibility                     Collaborators 
-- Has coordinates     |             - Player
-- Knows if its empty  |             - Ship
-- Knows if it is full |             - Board
-- Knows if its hit    |    
+Responsibility                     
+- Has coordinates                  
+- Knows if its empty              
+- Knows if it is full             
+- Knows if its hit       
 - Knows if not hit
+
+========================
+
+Collaborators
+- Player
+- Ship
+- Board
+
+
+
 
                                         Primary Board  
 
