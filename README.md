@@ -26,7 +26,7 @@ Skills involved:
 
                                           Cell  
 
-Responsibility                     
+**Responsibility**                     
 - Has coordinates                  
 - Knows if its empty              
 - Knows if it is full             
@@ -35,17 +35,13 @@ Responsibility
 
 ========================
 
-Collaborators
+**Collaborators**
 - Player
 - Ship
 - Board
-
-
-
-
                                         Primary Board  
 
-Responsibility        |   Collaborators 
+**Responsibility**        |   Collaborators 
 - Is a fixed size     |   - Cell
 - Is initiated empty  |   - Board
 - Will accept ships   |   - Player
