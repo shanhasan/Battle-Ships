@@ -18,6 +18,7 @@ We are **_Team D_** and our members include:
 Skills involved:
 - Agile Method
 - Ruby
+- rspec
 
 
 =========
