@@ -2,7 +2,7 @@ require './lib/cell'
 
 describe Cell do
 
-  let (:cell) { Cell.new(:coordinates => :A1 )}
+  let (:cell) { Cell.new(:coordinates => :A1) }
   let (:ship) { double :ship }
 
   it 'will initialize without a ship' do
@@ -11,6 +11,10 @@ describe Cell do
 
   it 'will not be hit on initializing' do
     expect(cell.hit).to be false
+  end
+
+  it 'raises an error if coordinates are not provided' do
+    expect(lambda { Cell.new }).to raise_error(ArgumentError)
   end
 
   it 'can hold a ship' do
@@ -28,8 +32,8 @@ describe Cell do
     expect(cell.hit).to be true
   end
 
-  xit 'knows its co-ordinates when it has been placed on the board' do
-    expect(cell.coordinates).to_be(:A1)
+  it 'knows its co-ordinates when it has been placed on the board' do
+    expect(cell.coordinates).to be(:A1)
   end
   
 end
