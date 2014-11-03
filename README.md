@@ -21,7 +21,6 @@ Skills involved:
 
 
 =========
-<<<<<<< HEAD
 
 ##CRC Cards##
 
