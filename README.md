@@ -21,6 +21,7 @@ Skills involved:
 
 
 =========
+<<<<<<< HEAD
 
 ##CRC Cards##
 
@@ -118,4 +119,43 @@ Skills involved:
 
   
 
+=======
+                    Cell  
+Responsibility        |   Collaborators 
+- Has coordinates     |   - Player
+- Knows if its empty  |   - Ship
+- Knows if it is full |   - Tracking board
+- Knows if its hit    |   - Primary board
+- Knows if not hit
+
+                Primary Board  
+Responsibility        |   Collaborators 
+- Is a fixed size     |   - Cell
+- Is initiated empty  |   - Tracking Board
+- Will accept ships   |   - Player
+                      |   
+
+
+                Tracking Board  
+Responsibility        |   Collaborators 
+- Is a fixed size     |   - Cell
+- Is initiated empty  |   - Primary board
+- Will mark cells     |   - Player
+
+                    Ship  
+Responsibility        |   Collaborators 
+- Is a set size       |   - Cells
+- Can be hit          |   - Tracking board
+- Sinks when full hit |   - Users
+                          - Primary board
+                                
+
+                      User  
+Responsibility                  |  Collaborators 
+- Set number of ships           |     - Player
+- Places ships on primary grid  |     - Ship
+- Fires shots at tracking grid  |     - Tracking board
+- Can win or loose              |     - Primary board
+- Takes turns to fire           |
+>>>>>>> 67cfb448444f163bd704477c630dbc0563fe81a5
 
