@@ -10,7 +10,7 @@ We are **_Team D_** and our members include:
 - Shan Hasan
 - Giorgia Amici
 - Richard Lake
-- Edward Bryne
+- Edward Byne
 - Dale Stevens
 
 ==========================
@@ -33,6 +33,7 @@ Skills involved:
 - Knows if it is full             
 - Knows if its hit       
 - Knows if not hit
+- Can't be hit twice
 
 ========================
 
@@ -114,9 +115,4 @@ Skills involved:
 
 
 ==========================================
-
-                                          
-
-  
-
 
