@@ -5,7 +5,7 @@ For our second week at Makers, we have been asked to design a game called Battle
 The winner is the player who sinks all of the opponent's ships. 
 
 
-We are _Team D_ and our members include:
+We are **_Team D_** and our members include:
 
 - Shan Hasan
 - Giorgia Amici
@@ -39,6 +39,8 @@ Skills involved:
 - Player
 - Ship
 - Board
+
+
 ========================
 
 
@@ -59,15 +61,15 @@ Skills involved:
 =====================================
 
                                          
-                                           Ship  
+                                                 Ship  
 
 **Responsibility**        
-- Is a set size         
+- It has a set size         
 - Can be hit            
 - Sinks when full hit    
 
 =======================================
-*Collaborators**
+**Collaborators**
 - Cell
 - Board
 - Player
@@ -82,7 +84,10 @@ Skills involved:
 - Places ships on primary grid      
 - Fires shots at tracking grid     
 - Can win or loose                
-- Takes turns to fire           
+- Takes turns to fire
+
+
+
 =================================================
 **Collaborators**
 - Ship
