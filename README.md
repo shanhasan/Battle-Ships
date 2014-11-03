@@ -1,4 +1,4 @@
-** Battle Ships **
+#** Battle Ships ** #
 
 
 For our second week at Makers, we have been asked to design a game called Battle Ships modulated on the board game, where there are two players and each player takes turns in trying to sink the opponent ships.
@@ -23,30 +23,30 @@ Skills involved:
 
 ##CRC Cards##
 =========
-                                Cell  
+                                          Cell  
 
-Responsibility        |   Collaborators 
-- Has coordinates     |   - Player
-- Knows if its empty  |   - Ship
-- Knows if it is full |   - Board
+Responsibility                     Collaborators 
+- Has coordinates     |             - Player
+- Knows if its empty  |             - Ship
+- Knows if it is full |             - Board
 - Knows if its hit    |    
 - Knows if not hit
 
-                               Primary Board  
+                                        Primary Board  
 
 Responsibility        |   Collaborators 
 - Is a fixed size     |   - Cell
 - Is initiated empty  |   - Board
 - Will accept ships   |   - Player
 
-                                   Ship  
+                                             Ship  
 
 Responsibility        |   Collaborators 
 - Is a set size       |   - Cells
 - Can be hit          |   - Board
 - Sinks when full hit |   - Users
 
-                                  User  
+                                              User  
 
 Responsibility                  |  Collaborators 
 - Set number of ships           |     - Player
