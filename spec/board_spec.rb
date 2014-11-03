@@ -20,5 +20,7 @@ it 'should have 100 cells' do
 	expect(grid.count).to eq(100)
 end
 
+'ill kill ya'
+
 	
 end
