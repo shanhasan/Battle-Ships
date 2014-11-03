@@ -39,27 +39,56 @@ Skills involved:
 - Player
 - Ship
 - Board
-                                        Primary Board  
+========================
 
-**Responsibility**        |   Collaborators 
-- Is a fixed size     |   - Cell
-- Is initiated empty  |   - Board
-- Will accept ships   |   - Player
 
-                                             Ship  
+                                     Primary Board  
 
-Responsibility        |   Collaborators 
-- Is a set size       |   - Cells
-- Can be hit          |   - Board
-- Sinks when full hit |   - Users
+**Responsibility**        
+- Is a fixed size       
+- Is initiated empty   
+- Will accept ships     
 
-                                              User  
+=========================
 
-Responsibility                  |  Collaborators 
-- Set number of ships           |     - Player
-- Places ships on primary grid  |     - Ship
-- Fires shots at tracking grid  |     - Board
-- Can win or loose              |    
-- Takes turns to fire           |
+**Collaborators**
+- Cell
+- Board
+- Player
 
+=====================================
+
+                                         
+                                           Ship  
+
+**Responsibility**        
+- Is a set size         
+- Can be hit            
+- Sinks when full hit    
+
+=======================================
+*Collaborators**
+- Cell
+- Board
+- Player
+
+===========================================
+
+                                         
+                                              Player  
+
+**Responsibility**                  
+- Set number of ships                
+- Places ships on primary grid      
+- Fires shots at tracking grid     
+- Can win or loose                
+- Takes turns to fire           
+=================================================
+**Collaborators**
+- Ship
+- Board
+- Cell
+
+
+==========================================
 
