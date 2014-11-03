@@ -44,7 +44,7 @@ Skills involved:
 ========================
 
 
-                                     Primary Board  
+                                           Primary Board  
 
 **Responsibility**        
 - Is a fixed size       
@@ -58,9 +58,26 @@ Skills involved:
 - Board
 - Player
 
-=====================================
-
+====================================
                                          
+
+
+                                           Tracking Board  
+**Responsibility** 
+
+- Is a fixed size 
+- Is initiated empty 
+- Will mark cells 
+
+==============================================
+**Collaborators**
+-Cell
+-Primary Board
+-Player
+
+===============================================
+
+          
                                                  Ship  
 
 **Responsibility**        
@@ -96,4 +113,9 @@ Skills involved:
 
 
 ==========================================
+
+                                          
+
+  
+
 
