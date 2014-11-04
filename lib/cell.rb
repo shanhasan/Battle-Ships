@@ -1,9 +1,3 @@
-# class CellFullError < Exception
-#   def message
-#     "This cell already holds a ship"
-#   end
-# end
-
 class Cell
 
   attr_accessor :empty, :ship, :hit
@@ -23,6 +17,7 @@ class Cell
   end
 
   def hit!
+    raise "This cell has already been hit" if hit == true
     @hit = true
   end
 
