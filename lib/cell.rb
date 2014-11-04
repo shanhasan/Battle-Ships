@@ -1,18 +1,24 @@
+# class CellFullError < Exception
+#   def message
+#     "This cell already holds a ship"
+#   end
+# end
+
 class Cell
 
+  attr_accessor :empty, :ship, :hit
+  attr_reader :coordinates
+
   def initialize(coordinates)
-    raise "You have not entered the cell's co-ordinates" if coordinates == nil
     @coordinates = coordinates.fetch(:coordinates)
     @empty = true
     @ship = nil
     @hit = false
   end
 
-  attr_accessor :empty, :ship, :hit
-  attr_reader :coordinates
-
   def hold(ship)
-    @empty = false
+    raise "This cell already holds a ship" if empty == false
+    @empty = false 
     @ship = ship
   end
 

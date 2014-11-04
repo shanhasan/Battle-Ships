@@ -22,6 +22,12 @@ describe Cell do
     expect(cell.empty).to be false
   end
 
+  it 'cannot hold a ship if it is not empty' do
+    ship2 = double(:ship)
+    cell.hold(ship)
+    expect { cell.hold(ship2) }.to raise_error(RuntimeError)
+  end
+
   it 'knows which ship it is holding' do
     cell.hold(ship)
     expect(cell.ship).to be(ship)
@@ -30,6 +36,11 @@ describe Cell do
   it 'can be hit' do
     cell.hit!
     expect(cell.hit).to be true
+  end
+
+  xit 'cannot be hit more than once' do
+    cell.hit!
+    expect { cell.hit! }.to raise_error(RuntimeError)
   end
 
   it 'knows its co-ordinates when it has been placed on the board' do
