@@ -12,5 +12,13 @@ describe Ship do
     expect(ship.hit!).to be_hit
   end
 
+  it 'has a length' do
+    expect(ship.length).to eq(5)
+  end
+
+  xit 'can have a variable length' do
+    expect(ship.lenth(3)).to eq(3)
+  end
+
 
 end

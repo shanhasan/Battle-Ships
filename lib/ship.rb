@@ -13,4 +13,8 @@ def hit!
   self
 end
 
+def length
+  5
+end
+
 end
