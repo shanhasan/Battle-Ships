@@ -19,7 +19,7 @@ class Ship
   end
 
   def sunk?
-    @number_of_hits == length
+    @number_of_hits == @length
   end
 
 end
