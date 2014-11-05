@@ -2,7 +2,7 @@ require './lib/ship'
 
 describe Ship do
   
-  let (:ship) { Ship.new }
+  let (:ship) { Ship.new(3) }
 
   it 'is not hit when initializied' do
     expect(ship).not_to be_hit
@@ -12,13 +12,8 @@ describe Ship do
     expect(ship.hit!).to be_hit
   end
 
-  it 'has a length' do
-    expect(ship.length).to eq(5)
+  xit 'has a length which is set on intializing' do
+    expect(ship.length).to eq(3)
   end
-
-  xit 'can have a variable length' do
-    expect(ship.lenth(3)).to eq(3)
-  end
-
 
 end

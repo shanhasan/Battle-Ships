@@ -13,8 +13,8 @@ def hit!
   self
 end
 
-def length
-  5
+def length(length)
+  @length = length
 end
 
 end
