@@ -2,15 +2,19 @@ require './lib/game.rb'
 
 describe Game do
 
-  let(:game) { Game.new }
+  let(:game) { Game.new(player1) }
   let(:player1) { double :Player }
   let(:player2) { double :Player }
 
-  it 'has players' do
+  it 'can have players' do
     expect(game.players).to be_an_instance_of(Array)
   end
 
-  it 'must have two players'
+  it 'must have two players' do
+    expect(game.players).to be_an_instance_of(Array)
+    game.add_player(player2)
+    expect(game.players.count).to eq(2)
+  end 
 
   it 'cannot have less or more than two players'
 
