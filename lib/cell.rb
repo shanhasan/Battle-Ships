@@ -14,4 +14,8 @@ class Cell
     @content.hit?
   end
 
+  def shot_at?
+    true
+  end
+
 end
