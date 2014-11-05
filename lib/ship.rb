@@ -1,19 +1,25 @@
 class Ship
 
-def initialize(length)
-  @length = length
-  @hit = false
-end
+  attr_reader :length, :number_of_hits
 
-attr_reader :length
+  def initialize(length)
+    @length = length
+    @hit = false
+    @number_of_hits = 0
+  end
 
-def hit?
-  @hit
-end
+  def hit?
+    @hit
+  end
 
-def hit!
-  @hit = true
-  self
-end
+  def hit!
+    @hit = true
+    @number_of_hits += 1
+    self
+  end
+
+  def sunk?
+    @number_of_hits == length
+  end
 
 end

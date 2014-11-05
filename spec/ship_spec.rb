@@ -16,7 +16,12 @@ describe Ship do
     expect(ship.length).to eq(3)
   end
 
-  xit 'can be sunk' do
+  it 'is not until unless hit a number of times equal to its length' do
+    2.times { ship.hit! }
+    expect(ship).not_to be_sunk
+  end
+
+  it 'can be sunk' do
     3.times { ship.hit! }
     expect(ship).to be_sunk
   end
