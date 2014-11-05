@@ -1,22 +1,38 @@
+class Cell
+end
+
 class Board 
 
+	attr_accessor :grid, :coords
+	attr_reader :letters, :numbers
 
-def initialize(grid = [])
-	@grid = grid
+def initialize
+	@grid = {}
+	@coords = []
+	rows
+	columns
 end
 
-def empty?
-	@grid.empty?
+def rows
+	@letters = [*'A'..'J']
 end
 
-def fill_it(cell)
-	100.times{ @grid << cell  }
+def columns
+	@numbers = [*1..10]
 end
 
-def count
-	@grid.size
+def setting_coordinates
+	@letters.each do |letter|
+		@numbers.each{|number| @coords << letter + number.to_s }
+  end
+end
+ 
+def gridded
+	self.setting_coordinates
+	@coords.each{|element| @grid[element.to_sym] = Cell.new }
+end
+
 end
 
 
 
-end

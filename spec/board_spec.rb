@@ -1,24 +1,37 @@
 require 'board'
 
 describe Board  do
-	let(:grid)                                {   Board.new   }
-	let(:cell)                                { double :cell }
+	let(:grid)                                {   Board.new     }
+	let(:cell)                                {  double :cell   }
 
-
-it 'should be empty when created' do
-	expect(grid).to be_empty
+def initialize_grid(grid)
+	grid.rows
+	grid.columns
+	grid.setting_coordinates
 end
 
-it 'can accept cells' do
-	expect(grid).to be_empty
-	grid.fill_it(cell)
+it 'has 10 rows' do
+	expect(grid.rows.size).to be(10)
+end
+
+it 'has 10 columns' do
+	expect(grid.columns.size).to be(10)
+end
+
+
+it 'crossing rows and columns gives a coordinate system' do
+	initialize_grid(grid)
+	expect(grid.coords.size).to be(100)
+end
+
+it 'each coordinates pair is filled with a cell' do
+	initialize_grid(grid)
+	grid.gridded
 	expect(grid).not_to be_empty
 end
 
-it 'should have 100 cells' do
-	grid.fill_it(cell)
-	expect(grid.count).to eq(100)
-end
+
+
 
 	
 end
