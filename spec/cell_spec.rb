@@ -20,7 +20,7 @@ describe Cell do
     expect(cell).to be_shot_at
   end
 
-  xit 'knows if it has not been shot at' do
+  it 'knows if it has not been shot at' do
     expect(cell).not_to be_shot_at
   end
 

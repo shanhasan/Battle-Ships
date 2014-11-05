@@ -1,12 +1,15 @@
 class Cell
 
-  attr_accessor :hit, :content
+  attr_reader :content
+  # NB need to change to accessor if water changed to ship after initializing
 
   def initialize(content)
     @content = content
+    @shot_at = false
   end
 
   def hit!
+    @shot_at = true
     @content.hit!
   end
 
@@ -15,7 +18,7 @@ class Cell
   end
 
   def shot_at?
-    true
+    @shot_at
   end
 
 end
