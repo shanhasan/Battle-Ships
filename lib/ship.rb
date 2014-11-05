@@ -1,8 +1,11 @@
 class Ship
 
-def initialize
+def initialize(length)
+  @length = length
   @hit = false
 end
+
+attr_reader :length
 
 def hit?
   @hit
@@ -11,10 +14,6 @@ end
 def hit!
   @hit = true
   self
-end
-
-def length(length)
-  @length = length
 end
 
 end

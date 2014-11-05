@@ -12,8 +12,13 @@ describe Ship do
     expect(ship.hit!).to be_hit
   end
 
-  xit 'has a length which is set on intializing' do
+  it 'has a length which is set on intializing' do
     expect(ship.length).to eq(3)
+  end
+
+  xit 'can be sunk' do
+    3.times { ship.hit! }
+    expect(ship).to be_sunk
   end
 
 end
