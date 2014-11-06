@@ -2,9 +2,10 @@ require './lib/game.rb'
 
 describe Game do
 
-  let(:game) { Game.new(player1) }
+  let(:game)    { Game.new(player1) }
   let(:player1) { double :Player }
   let(:player2) { double :Player }
+  let(:ship)    { double :Ship }
 
   it 'can have players' do
     expect(game.players).to be_an_instance_of(Array)
@@ -30,7 +31,10 @@ describe Game do
 
   it 'must have two boards'
 
-  it 'must have 10 ships'
+  it 'must have 10 ships' do
+    10.times { game.add_ships(ship) }
+    expect(game.ships.count).to eq(10)
+  end
 
   it ''
 

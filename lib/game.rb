@@ -1,9 +1,10 @@
 class Game
 
-  attr_accessor :players
+  attr_accessor :players, :ships
 
   def initialize(player)
   	add_player(player)
+    @ships = []
   end
 
   def players
@@ -14,5 +15,9 @@ class Game
     raise "The game already has two players" if players.count >= 2
   	self.players << player
 	end
+
+  def add_ships(ship)
+    @ships << ship
+  end
 
 end
