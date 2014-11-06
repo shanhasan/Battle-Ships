@@ -1,19 +1,9 @@
 class Player
 
-  def place_ships
-    puts "Insert first coordinate for Ship 1"
-    @ship1_coordinates = [*"A1".."A4"]
+  attr_accessor :board
 
-
+  def board
+    @board.nil?
   end
-
-  def ship1_coordinates
-    @ship1_coordinates
-  end
-
-  def coordinates
-    @coordinates
-  end
-
 
 end
