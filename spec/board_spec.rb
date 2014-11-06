@@ -48,19 +48,19 @@ end
 
 
 
- table2 = Terminal::Table.new do |t|
-      t << ['A', '~']
-			t.add_row ['B', '~']
-	 end
+#  table2 = Terminal::Table.new do |t|
+#       t << ['A', '~']
+# 			t.add_row ['B', '~']
+# 	 end
 
 
-letters = [*'A'..'J']
+# letters = [*'A'..'J']
 
 
 
 
 
-puth
+# puth
 
 
 
