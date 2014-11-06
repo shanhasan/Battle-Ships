@@ -20,4 +20,13 @@ class Game
     @ships << ship
   end
 
+  def take_turn
+    @players.rotate!
+    @players[0]
+  end
+
+  def whos_turn
+    @players[0]
+  end
+
 end

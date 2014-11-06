@@ -25,7 +25,11 @@ describe Game do
 
   it 'cannot be played with less than two players'
 
-  it 'alternates between the players to take turns'
+  it 'alternates between the players to take turns' do
+    game.add_player(player2)exit
+    game.take_turn
+    expect(game.whos_turn).to eq(player2)
+  end
 
   it 'allows player to take another turn if they hit a ship'
 
@@ -36,8 +40,8 @@ describe Game do
     expect(game.ships.count).to eq(10)
   end
 
-  it ''
-
   it 'knows when a players wins'
+    # if other players sunk ships array reaches count 5 a method is automatically called
+    # in the take turn function that checks if the player has won.
 
 end
