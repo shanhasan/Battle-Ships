@@ -41,7 +41,5 @@ describe Game do
   end
 
   it 'knows when a players wins'
-    # if other players sunk ships array reaches count 5 a method is automatically called
-    # in the take turn function that checks if the player has won.
 
 end
