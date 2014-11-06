@@ -14,9 +14,15 @@ describe Game do
     expect(game.players).to be_an_instance_of(Array)
     game.add_player(player2)
     expect(game.players.count).to eq(2)
-  end 
+  end
 
-  it 'cannot have less or more than two players'
+  it 'cannot be played with more than two players' do
+    player3 = double("player")
+    game.add_player(player2)
+    expect { game.add_player(player3) }.to raise_error(RuntimeError) if game.players.count >= 2
+  end
+
+  it 'cannot be played with less than two players'
 
   it 'alternates between the players to take turns'
 
@@ -26,6 +32,8 @@ describe Game do
 
   it 'must have 10 ships'
 
+  it ''
+
   it 'knows when a players wins'
-  
+
 end

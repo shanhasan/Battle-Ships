@@ -11,16 +11,8 @@ class Game
   end
 
   def add_player(player)
+    raise "The game already has two players" if players.count >= 2
   	self.players << player
 	end
-
-
-
-
-
-
-
-
-
 
 end
