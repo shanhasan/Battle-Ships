@@ -3,10 +3,10 @@ require './lib/game.rb'
 describe Game do
 
   let(:game)    { Game.new }
-  let(:player1) { double :Player }
-  let(:player2) { double :Player }
-  let(:ship)    { double :Ship }
-  let(:cell)    { double :Cell, {:hit? => true} }
+  let(:player1) { double :player, :board => board }
+  let(:player2) { double :player, :board => board2 }
+  let(:board)   { double :board }
+  let(:board2)  { double :board }
 
   context 'Players...' do
 
@@ -50,7 +50,8 @@ describe Game do
     end
 
     it 'switches turns after a player fires' do
-      allow(player2).to receive(:receive_shot).with(:A1)
+      allow(player2).to receive(:receive_shot)
+      allow(board2).to receive(:sunk?).and_return false
       game.fire_at(:A1)
       expect(game.whose_turn).to be(player2)
     end
@@ -59,10 +60,20 @@ describe Game do
 
   context 'Has two players with boards' do
 
-    xit 'receives a shot' do
+    before do
+      game.add_player(player1)
+      game.add_player(player2)
     end
 
-    xit 'knows when a players wins' do
+    it 'receives a shot' do
+      expect(player2).to receive(:receive_shot)
+      allow(board2).to receive(:sunk?)
+      game.fire_at(:B1)
+    end
+
+    it 'knows when a players wins' do
+      allow(board2).to receive(:sunk?).and_return true
+      expect(game).to be_won
     end
 
     xit 'knows if the game is ready' do

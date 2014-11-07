@@ -29,7 +29,12 @@ class Game
 
   def fire_at(coordinates)
     opponent.receive_shot(coordinates)
+    return "Winner!" if won?
     switch_turn
+  end
+
+  def won?
+    opponent.board.sunk?
   end
 
 end
