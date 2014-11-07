@@ -1,17 +1,12 @@
-require './lib/player'
+# require 'player'
 
-describe Player do
+# describe Player do
+# 	let(:player) { Player.new }
 
-  let (:player) { Player.new }
-  let (:ship) {double :ship }
+#   it "has a board" do
+#   	expect(player).to have_board
+#   end
+  
 
-  it "should be able to select the coordinates for placing a ship" do
-    player.place_ships
-    expect(player.place_ships).to eq(player.ship1_coordinates)
-  end
+# end
 
-  xit "should be able to select coordinates for shooting" do
-
-  end
-
-end
