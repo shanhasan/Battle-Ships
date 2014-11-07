@@ -2,9 +2,7 @@ class Game
 
   attr_accessor :players, :ships
 
-  def initialize(player)
-  	add_player(player)
-    @ships = []
+  def initialize
   end
 
   def players
@@ -16,12 +14,7 @@ class Game
   	self.players << player
 	end
 
-  def add_ships(ship)
-    @ships << ship
-  end
-
   def take_turn
-    # if cell.hit? is true -> stop rotation so player gets another turn
     @players.rotate!
     @players[0]
   end
