@@ -28,7 +28,7 @@ class Game
   end
 
   def has_ships?
-    attacker.board.ships_count == 5 and opponent.board.ships_count == 5
+    attacker.board.ship_count == 5 and opponent.board.ship_count == 5
     # check with Giorgia on the above method name ships_count
   end
 

@@ -5,8 +5,8 @@ describe Game do
   let(:game)    { Game.new }
   let(:player1) { double :player, :board => board }
   let(:player2) { double :player, :board => board2 }
-  let(:board)   { double :board , :ships_count => 5 }
-  let(:board2)  { double :board, :ships_count => 5 }
+  let(:board)   { double :board , :ship_count => 5 }
+  let(:board2)  { double :board, :ship_count => 5 }
 
   context 'Players...' do
 
@@ -69,7 +69,7 @@ describe Game do
 
   end
 
-  context 'Has two players with boards' do
+  context 'Has two players with ships and boards' do
 
     before do
       game.add_player(player1)
@@ -99,12 +99,12 @@ describe Game do
     end
 
     it 'knows if the game is not ready' do
-      allow(board2).to receive(:ships_count).and_return(3)
+      allow(board2).to receive(:ship_count).and_return(3)
       expect(game).not_to be_ready
     end
 
     it 'will not allow a player to fire unless the game is ready' do
-      allow(board2).to receive(:ships_count).and_return(3)
+      allow(board2).to receive(:ship_count).and_return(3)
       expect{ game.fire_at(:C4) }.to raise_error(RuntimeError)
     end
 
