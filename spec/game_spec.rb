@@ -35,16 +35,24 @@ describe Game do
 
   context 'Turns...' do
 
-    xit 'can switch turns' do
-    end
-
-    it 'knows whos turn it is to shoot' do
+    before do
+      game.add_player(player1)
       game.add_player(player2)
-      game.take_turn
-      expect(game.whos_turn).to eq(player2)
     end
 
-    xit 'switches turns after a player shoots' do
+    it 'gives 1st player the 1st turn' do
+      expect(game.whose_turn).to be(player1)
+    end
+
+    it 'switches turns' do
+      game.switch_turn
+      expect(game.whose_turn).to be(player2)
+    end
+
+    it 'switches turns after a player fires' do
+      allow(player2).to receive(:receive_shot).with(:A1)
+      game.fire_at(:A1)
+      expect(game.whose_turn).to be(player2)
     end
 
   end

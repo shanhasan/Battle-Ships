@@ -1,9 +1,6 @@
 class Game
 
-  attr_accessor :players, :ships
-
-  def initialize
-  end
+  attr_reader :attacker, :opponent
 
   def players
     @players ||= []
@@ -14,13 +11,25 @@ class Game
   	self.players << player
 	end
 
-  def take_turn
-    @players.rotate!
-    @players[0]
+  def attacker
+    players[0]
   end
 
-  def whos_turn
-    @players[0]
+  def opponent
+    players[1]
+  end
+
+  def switch_turn
+    players.rotate!
+  end
+
+  def whose_turn
+    attacker
+  end
+
+  def fire_at(coordinates)
+    opponent.receive_shot(coordinates)
+    switch_turn
   end
 
 end
