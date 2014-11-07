@@ -6,7 +6,7 @@ class Player
     !@board.nil?
   end
 
-  def shoot(coordinates)
+  def receive_shot(coordinates)
     @board.shoot_at(coordinates)
   end
 

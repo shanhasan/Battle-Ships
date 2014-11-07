@@ -13,7 +13,7 @@ describe Player do
   it 'should shoot at the board' do
     player.board = board
     expect(board).to receive(:shoot_at).with(:A1)
-    player.shoot(:A1)
+    player.receive_shot(:A1)
   end
 
 end
