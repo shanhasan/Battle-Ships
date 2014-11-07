@@ -5,8 +5,8 @@ describe Game do
   let(:game)    { Game.new }
   let(:player1) { double :player, :board => board }
   let(:player2) { double :player, :board => board2 }
-  let(:board)   { double :board }
-  let(:board2)  { double :board }
+  let(:board)   { double :board , :ships_count => 5 }
+  let(:board2)  { double :board, :ships_count => 5 }
 
   context 'Players...' do
 
@@ -56,6 +56,17 @@ describe Game do
       expect(game.whose_turn).to be(player2)
     end
 
+    it 'knows when a players wins' do
+      allow(board2).to receive(:sunk?).and_return true
+      expect(game).to be_won
+    end
+
+    it 'raises exception if the game is won' do
+      allow(board2).to receive(:sunk?).and_return true
+      allow(player2).to receive(:receive_shot)
+      expect { game.fire_at(:F6) }.to raise_error(RuntimeError)
+    end
+
   end
 
   context 'Has two players with boards' do
@@ -71,29 +82,30 @@ describe Game do
       game.fire_at(:B1)
     end
 
-    it 'knows when a players wins' do
-      allow(board2).to receive(:sunk?).and_return true
-      expect(game).to be_won
-    end
-
     it 'knows that there are two players' do
       expect(game).to have_players
     end
 
     it 'knows if the players have boards' do
-      allow(player1).to receive(:board).and_return true
-      allow(player2).to receive(:board).and_return true
       expect(game).to have_boards
     end
 
     it 'knows if the players have ships' do
-
+      expect(game).to have_ships
     end
 
-    xit 'knows if the game is ready' do
+    it 'knows if the game is ready' do
+      expect(game).to be_ready
     end
 
-    xit 'knows if the game is not ready' do
+    it 'knows if the game is not ready' do
+      allow(board2).to receive(:ships_count).and_return(3)
+      expect(game).not_to be_ready
+    end
+
+    it 'will not allow a player to fire unless the game is ready' do
+      allow(board2).to receive(:ships_count).and_return(3)
+      expect{ game.fire_at(:C4) }.to raise_error(RuntimeError)
     end
 
   end

@@ -24,7 +24,16 @@ class Game
   end
 
   def has_boards?
-    attacker.board && opponent.board
+    attacker.board and opponent.board
+  end
+
+  def has_ships?
+    attacker.board.ships_count == 5 and opponent.board.ships_count == 5
+    # check with Giorgia on the above method name ships_count
+  end
+
+  def ready?
+    has_players? and has_boards? and has_ships?
   end
 
   def switch_turn
@@ -36,8 +45,9 @@ class Game
   end
 
   def fire_at(coordinates)
+    raise "not ready to play" unless ready?
     opponent.receive_shot(coordinates)
-    return "Winner!" if won?
+    raise "Winner!" if won?
     switch_turn
   end
 
