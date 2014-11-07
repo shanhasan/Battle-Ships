@@ -19,6 +19,14 @@ class Game
     players[1]
   end
 
+  def has_players?
+    players.count == 2
+  end
+
+  def has_boards?
+    attacker.board && opponent.board
+  end
+
   def switch_turn
     players.rotate!
   end

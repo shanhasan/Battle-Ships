@@ -14,12 +14,12 @@ describe Game do
       expect(game.players.count).to eq(0)
     end
 
-    it 'knows when it has just one player' do
+    it 'can have just one player' do
       game.add_player(player1)
       expect(game.players.count).to eq(1)
     end
 
-    it 'knows when it has two players' do
+    it 'can have two players' do
       game.add_player(player1)
       game.add_player(player2)
       expect(game.players.count).to eq(2)
@@ -76,16 +76,24 @@ describe Game do
       expect(game).to be_won
     end
 
+    it 'knows that there are two players' do
+      expect(game).to have_players
+    end
+
+    it 'knows if the players have boards' do
+      allow(player1).to receive(:board).and_return true
+      allow(player2).to receive(:board).and_return true
+      expect(game).to have_boards
+    end
+
+    it 'knows if the players have ships' do
+
+    end
+
     xit 'knows if the game is ready' do
     end
 
     xit 'knows if the game is not ready' do
-    end
-
-    xit 'will ask if the player has a board' do
-    end
-
-    xit 'knows if the player has ships' do
     end
 
   end
