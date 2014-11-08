@@ -22,4 +22,8 @@ class Ship
     @number_of_hits == @length
   end
 
+  def battleship
+    new 4
+  end
+
 end
