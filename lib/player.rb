@@ -1,9 +1,13 @@
 class Player
 
-	attr_accessor :board
+  attr_accessor :board
 
-	def has_board?
+  def board
+    !@board.nil?
+  end
 
-	end
+  def receive_shot(coordinates)
+    @board.shoot(coordinates)
+  end
 
 end
