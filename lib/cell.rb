@@ -1,7 +1,6 @@
 class Cell
 
-  attr_reader :content
-  # NB need to change to accessor if water changed to ship after initializing
+  attr_accessor :content
 
   def initialize(content)
     @content = content
