@@ -60,7 +60,6 @@ Skills involved:
 - Player
 
 ====================================
-                                         
 
 
                                            Tracking Board  
